@@ -68,8 +68,8 @@ public class UserDAO {
             if (resultSet.next()) {
                 user = new User(
                         userId,
-                        resultSet.getString("email"),
                         resultSet.getString("username"),
+                        resultSet.getString("email"),
                         resultSet.getString("password"));
             }
 
@@ -141,8 +141,8 @@ public class UserDAO {
             while (resultSet.next()) {
                 User user = new User(
                         resultSet.getInt("id"),
-                        resultSet.getString("email"),
                         resultSet.getString("username"),
+                        resultSet.getString("email"),
                         resultSet.getString("password"));
 
                 users = addToArray(user, users);
